@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+
+<launch>
+	<node pkg="v9_ball_tracker" name="v9_ball_tracker_node" type="v9_ball_tracker_node" output="screen" >
+            <param name="p_gain" type="double" value="2.0" />
+            <param name="d_gain" type="double" value="30.3" />
+	</node>
+	
+</launch>

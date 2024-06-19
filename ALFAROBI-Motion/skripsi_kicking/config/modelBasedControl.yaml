@@ -1,0 +1,16 @@
+ss:
+  Ts: 0.033
+observer:
+  gyroThreshold: 0.2
+controller:
+  tuneGain: false
+  testObserver: false 
+  zeroOut: true
+  COMrefX: 0.0
+  COMrefY: 0.0
+  pitchRef: -3.0
+  rollRef: 0.0
+  pitchErrorMAX: -2 #5
+  pitchErrorMIN: -10 
+  GainIntegral: 2
+  Batas: 5

@@ -1,0 +1,14 @@
+tapak-ankle 35,5
+ankle-knee 116,8mm
+knee-hip 116,8mm
+hip-hip 76,8mm
+hipyaw->hiproll 3x,0y,33.5z mm
+head pan - baseimu 17.5x, 0.125y, 59.82mm
+hippan -> baseimu 17.5x, 38.4y, 97.28z
+headpan->hip yaw -2,691x, -38,744y, 157,1z 
+headtilt->headpan 2,691x, 0y, 43z
+camera->headtilt 9x, 0,717y, 60,021z
+
+base - arm 17.5x, 66.125y, 36,52z
+
+body center-> imu 53.78mm

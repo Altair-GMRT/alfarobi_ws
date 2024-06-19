@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/alfarobi/alfarobi_ws/src/DynamixelSDK/c++/build/devel/setup.sh

@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- right arm -->
+  <xacro:macro name="alfarobi_r_arm" params="parent">
+
+  <!-- right shoulder pitch joint -->
+  <joint name="r_sho_pitch" type="revolute">
+    <parent link="${parent}"/>
+    <child link="r_sho_pitch_link"/>
+    <origin xyz="0.0175 -0.066125 0.03652" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit effort="2.8" velocity="5.6548668" lower="-2.6179939" upper="2.6179939" />
+  </joint>
+  <xacro:insert_transmission name="r_sho_pitch" />
+
+<!-- right shoulder pitch link -->
+<link name="r_sho_pitch_link">
+  <visual>
+    <xacro:insert_mesh_r_sho_pitch_link />
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0  0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/r_shoulder_pitch.stl"  scale="1 1 1"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <xacro:insert_inertia_r_sho_pitch_link />
+  </inertial>
+</link>
+
+  <!-- right shoulder roll joint -->
+  <joint name="r_sho_roll" type="revolute">
+    <parent link="r_sho_pitch_link"/>
+    <child link="r_sho_roll_link"/>
+    <origin xyz="0 -0.0245 -0.016" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit effort="2.8" velocity="5.648668" lower="-2.6179939" upper="2.6179939" />
+  </joint>
+  <xacro:insert_transmission name="r_sho_roll" />
+
+<!-- right shoulder roll link -->
+<link name="r_sho_roll_link">
+  <visual>
+    <xacro:insert_mesh_r_sho_roll_link />
+  </visual>
+  <collision>
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/r_shoulder_roll.stl"  scale="1 1 1"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <xacro:insert_inertia_r_sho_roll_link />
+  </inertial>
+</link>
+
+  <!-- right elbow joint -->
+  <joint name="r_el" type="revolute">
+    <parent link="r_sho_roll_link"/>
+    <child link="r_el_link"/>
+    <origin xyz="0.021 0 -0.1072" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit effort="2.8" velocity="5.6548668" lower="-2.6179939" upper="2.6179939" />
+  </joint>
+  <xacro:insert_transmission name="r_el" />
+
+<!-- right elbow link -->
+<link name="r_el_link">
+  <visual>
+    <xacro:insert_mesh_r_el_link />
+  </visual>
+  <collision>
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/r_elbow.stl"  scale="1 1 1"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <xacro:insert_inertia_r_el_link />
+  </inertial>
+</link>
+
+  </xacro:macro>
+
+</robot>

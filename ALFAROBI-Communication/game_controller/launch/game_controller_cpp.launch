@@ -1,0 +1,4 @@
+<launch>
+    <node name="game_controller" pkg="game_controller" type="game_controller" output="screen"/>
+
+</launch>

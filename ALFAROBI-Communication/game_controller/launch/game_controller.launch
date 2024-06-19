@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="game_controller" type="receiver.py" name="game_controller_node" output="screen" respawn="true">
+    </node>
+</launch>

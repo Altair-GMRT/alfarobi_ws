@@ -1,0 +1,3 @@
+alfarobi-rtprio masukin di /etc/security/limits.d/
+
+50-alfarobi masukin di /etc/udev/rules.d/

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<launch>
+    <arg name="use_arduimu" default="true"/>
+    <param name="gazebo"                   value="false"    type="bool"/>
+    <param name="gazebo_robot_name"        value="alfarobi"/>
+
+    <param name="offset_file_path"         value="$(find op3_manager)/config/offset.yaml"/>
+    <param name="robot_file_path"          value="$(find op3_manager)/config/OP2.robot"/>
+    <param name="init_file_path"           value="$(find op3_manager)/config/dxl_init.yaml"/>
+    <param name="alfarobi_offset"          value="$(find op3_manager)/config/offset.yaml"/>
+    <param name="device_name"              value="/dev/ttyUSB0"/>
+    <!-- <param name="device_name"              value="/dev/ttyACM0"/> -->
+
+    <node name="alfarobi_manager" pkg="op3_manager" type="op3_manager" output="screen"/>
+    <rosparam file="$(find op3_manager)/config/GlobalConfig.yaml" command="load" ns="GlobalConfig" />
+
+    <!-- <include file="$(find arduino_controller)/arduino_controller.launch" if="$(arg use_arduimu)"/> -->
+    <!-- <include file="$(find arduino_controller)/arduino_controller.launch" if="$(arg use_arduimu)"/> -->
+</launch>

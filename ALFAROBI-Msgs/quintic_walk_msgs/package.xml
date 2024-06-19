@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>quintic_walk_msgs</name>
+  <version>0.1.0</version>
+  <description>
+    quintic_walk_msgs
+  </description>
+  <license>Apache License 2.0</license>
+  <author email="kmjung@robotis.com">Kayman</author>
+  <maintainer email="pyo@robotis.com">Pyo</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>std_msgs</run_depend>
+</package>

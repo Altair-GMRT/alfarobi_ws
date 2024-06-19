@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<launch>    
+    <include file="$(find op3_manager)/launch/alfarobi_manager.launch"/>
+    <include file="$(find v9_ball_detector)/launch/v9_ball_detector.launch"/>
+    <!-- <include file="$(find hline_square_detector)/launch/v9_ball_detector.launch"/> -->
+    <include file="$(find v9_localization)/launch/v9_localization.launch"/>
+    <include file="$(find game_controller)/launch/game_controller_cpp.launch"/> 
+
+    <node pkg="alfarobi" type="alfarobi_node" name="alfarobi_soccer" output="screen">
+
+    <param name="FOV_WIDTH" type="double" value="61.25"/>
+    <param name="FOV_HEIGHT" type="double" value="47.88"/>
+
+    <param name="pan_p" type="double" value="0.12" />
+    <param name="pan_d" type="double" value="0.175" />
+    <param name="pan_dir" type="double" value="-1" />
+      
+    <param name="tilt_p" type="double" value="0.125" />
+    <param name="tilt_d" type="double" value="0.2" />
+    <param name="tilt_dir" type="double" value="1" />
+
+    <param name="keeper" type="bool" value="true" />
+    <param name="runner" type="bool" value="false" />
+    <param name="dribbler" type="bool" value="false" />
+    <param name="passer" type="bool" value="false" />    
+
+    <param name="calibration" type="bool" value="false" />
+    <param name="penalty" type="bool" value="false" />
+    <param name="fallen_mode" type="bool" value="false" />
+
+    </node>
+
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find alfarobi)/custom_rosconsole.conf"/>
+</launch>

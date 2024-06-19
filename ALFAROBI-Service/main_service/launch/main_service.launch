@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+	<arg name="use_arduimu" default="true"/>
+    <node name="main_service" pkg="main_service" type="main_service.py" />
+    <include file="$(find arduino_controller)/arduino_controller.launch" if="$(arg use_arduimu)"/>
+</launch>

@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- head -->
+  <xacro:macro name="alfarobi_head" params="parent">
+
+  <!-- head yaw joint -->
+  <joint name="head_pan" type="revolute">
+    <parent link="${parent}"/>
+    <child link="head_pan_link"/>
+    <origin xyz="0.0175 0.000125 0.05982" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="2.8" velocity="5.6548668" lower="-2.6179939" upper="2.6179939" />
+  </joint>
+  <xacro:insert_transmission name="head_pan" />
+
+<!-- head yaw link -->
+<link name="head_pan_link">
+  <visual>
+    <xacro:insert_mesh_head_pan_link />
+  </visual>
+  <collision>
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/head_pan.stl"  scale="1 1 1"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <xacro:insert_inertia_head_pan_link />
+  </inertial>
+</link>
+
+  <!-- head tilt joint -->
+  <joint name="head_tilt" type="revolute">
+    <parent link="head_pan_link"/>
+    <child link="head_tilt_link"/>
+    <origin xyz="0.002691 0 0.043" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit effort="2.8" velocity="5.6548668" lower="-2.6179939" upper="2.6179939" />
+  </joint>
+  <xacro:insert_transmission name="head_tilt" />
+
+  <!-- head tilt link -->
+  <link name="head_tilt_link">
+    <visual>
+      <xacro:insert_mesh_head_tilt_link />
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://alfarobi_description/mesh/head_tilt.stl"  scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <xacro:insert_inertia_head_tilt_link />
+    </inertial>
+  </link>
+
+  <!-- camera joint -->
+  <joint name="cam" type="fixed">
+    <origin xyz="0.009 0.000717 0.06021" rpy="0 0 0" />
+    <parent link="head_tilt_link"/>
+    <child link="camera_link"/>
+    <axis xyz="0 1 0" />
+    <limit effort="2.8" velocity="5.6548668" lower="-2.6179939" upper="2.6179939" />
+  </joint>
+
+  <!-- camera link -->
+  <link name="camera_link">
+     </link>
+
+<!--  <sensor_d435 parent="head_tilt_link">
+    <origin xyz="0 0 0.0365" rpy="0 0 0"/>
+  </sensor_d435>-->
+
+  </xacro:macro>
+
+</robot>

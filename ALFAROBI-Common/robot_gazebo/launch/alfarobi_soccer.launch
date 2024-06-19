@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<launch>
+
+<param name="use_sim_time" value="true" />
+   
+<param name="robot_description"
+   command="$(find xacro)/xacro --inorder '$(find alfarobi_description)/urdf/alfarobi.urdf.xacro'" />
+
+<include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find robot_gazebo)/worlds/robocup_field.world"/>
+    <arg name="paused" value="true"/>
+  </include>
+
+  <!-- Robot pose -->
+  <arg name="x" default="-1"/>
+  <arg name="y" default="0"/>
+  <arg name="z" default="0.43"/>
+  <arg name="R" default="0"/>
+  <arg name="P" default="0"/>
+  <arg name="Y" default="0"/>
+
+<node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+       respawn="false" output="screen" args="-param robot_description
+          -urdf
+          -model alfarobi
+          -x $(arg x)
+          -z $(arg z) "/>
+
+  <include file="$(find robot_gazebo)/launch/alfarobi_position_control.launch"/>
+</launch>

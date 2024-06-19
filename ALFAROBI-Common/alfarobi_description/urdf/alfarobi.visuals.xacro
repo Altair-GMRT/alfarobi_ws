@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- body link -->
+  <xacro:macro name="insert_mesh_body_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/Body-n.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- right hip yaw link -->
+  <xacro:macro name="insert_mesh_r_hip_yaw_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/hip_yaw.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- right hip roll link -->
+  <xacro:macro name="insert_mesh_r_hip_roll_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/r_hip_roll.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- right hip pitch link -->
+  <xacro:macro name="insert_mesh_r_hip_pitch_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/r_hip_pitch.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- right knee link -->
+  <xacro:macro name="insert_mesh_r_knee_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/lower_leg.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- right ankle pitch link -->
+  <xacro:macro name="insert_mesh_r_ank_pitch_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/r_ank_pitch.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- right ankle roll link -->
+  <xacro:macro name="insert_mesh_r_ank_roll_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/r_ank_roll.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- left hip yaw link -->
+  <xacro:macro name="insert_mesh_l_hip_yaw_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/hip_yaw.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- left hip roll link -->
+  <xacro:macro name="insert_mesh_l_hip_roll_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/l_hip_roll.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- left hip pitch link -->
+  <xacro:macro name="insert_mesh_l_hip_pitch_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/l_hip_pitch.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- left knee link -->
+  <xacro:macro name="insert_mesh_l_knee_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/lower_leg.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- left ankle pitch link -->
+  <xacro:macro name="insert_mesh_l_ank_pitch_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/l_ank_pitch.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- left ankle roll link -->
+  <xacro:macro name="insert_mesh_l_ank_roll_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/l_ank_roll.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- right shoulder pitch joint -->
+  <xacro:macro name="insert_mesh_r_sho_pitch_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/r_shoulder_pitch.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- right shoulder roll joint -->
+  <xacro:macro name="insert_mesh_r_sho_roll_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/r_shoulder_roll.stl"  scale="1 1 1"/>
+    </geometry>
+  </xacro:macro>
+
+  <!-- right elbow joint -->
+  <xacro:macro name="insert_mesh_r_el_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/r_elbow.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- left shoulder pitch joint -->
+  <xacro:macro name="insert_mesh_l_sho_pitch_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/l_shoulder_pitch.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- left shoulder roll joint -->
+  <xacro:macro name="insert_mesh_l_sho_roll_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/l_shoulder_roll.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- left elbow joint -->
+  <xacro:macro name="insert_mesh_l_el_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/l_elbow.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- head pan joint -->
+  <xacro:macro name="insert_mesh_head_pan_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/head_pan.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+  <!-- head tilt joint -->
+  <xacro:macro name="insert_mesh_head_tilt_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/head_tilt.stl"  scale="1 1 1"/>
+    </geometry>
+    <material name="grey"/>
+  </xacro:macro>
+
+</robot>

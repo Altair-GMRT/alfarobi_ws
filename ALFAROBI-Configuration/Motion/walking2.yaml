@@ -1,0 +1,22 @@
+quintic_walk:
+  trunkXOffsetPCoefTurn: 0
+  trunkXOffsetPCoefForward: 0.5
+  footApexPhase: 0.5
+  footOvershootRatio: 0
+  trunkSwing: 0
+  freq: 0
+  trunkPitch: 0
+  trunkPitchPCoefForward: 0
+  trunkYOffset: 0
+  footDistance: 0
+  footRise: 0
+  trunkPitchPCoefTurn: 0
+  trunkYOnlyInDoubleSupport: false
+  footPutDownPhase: 1
+  trunkXOffset: 0
+  footOvershootPhase: 0
+  trunkPhase: 0.5
+  doubleSupportRatio: 0
+  footPutDownZOffset: 0
+  trunkPause: 0.5
+  trunkHeight: 0

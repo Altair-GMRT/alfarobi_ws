@@ -1,0 +1,18 @@
+printKickVar: false
+feedbackActive: true
+servoFeedbackActive: true
+initPose: false
+ankleMode: 0
+liftFoot: true
+holdPose: false
+FKfromgoalPos: true
+samplingRateEMA: 10 
+openLoop:
+  L_Tilt: 5
+  R_Tilt: 10
+  L_X_Manip: 0.02
+  R_X_Manip: 0.01
+  ballPosX: 0.30
+  ballPosZ: 0.09
+  R_Z_Lift: 0.1
+  L_Z_Lift: 0.1

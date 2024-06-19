@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="alfarobi">
+
+  <xacro:include filename="$(find alfarobi_description)/urdf/alfarobi.visuals.xacro" />
+  <xacro:include filename="$(find alfarobi_description)/urdf/alfarobi.inertia.xacro" />
+
+  <xacro:include filename="$(find alfarobi_description)/urdf/alfarobi.structure.rleg.xacro" />
+  <xacro:include filename="$(find alfarobi_description)/urdf/alfarobi.structure.lleg.xacro" />
+  <xacro:include filename="$(find alfarobi_description)/urdf/alfarobi.structure.rarm.xacro" />
+  <xacro:include filename="$(find alfarobi_description)/urdf/alfarobi.structure.larm.xacro" />
+  <xacro:include filename="$(find alfarobi_description)/urdf/alfarobi.structure.head.xacro" />
+
+  <xacro:include filename="$(find alfarobi_description)/urdf/alfarobi.gazebo.xacro" />
+  <xacro:include filename="$(find alfarobi_description)/urdf/alfarobi.transmissions.xacro" />
+  <xacro:include filename="$(find alfarobi_description)/urdf/materials.xacro" />
+
+<!--
+  <link name="base_link"/>
+
+  <joint name="base_link_to_body" type="fixed">
+    <parent link="base_link"/>
+    <child link="body_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+-->
+<!--   body link-->
+  <link name="body_link">
+    <visual>
+      <xacro:insert_mesh_body_link />
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://alfarobi_description/mesh/Body-n.stl"  scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <xacro:insert_inertia_body_link />
+    </inertial>
+  </link>
+
+  <!-- imu joint -->
+  <joint name="imu_fixed" type="fixed">
+    <parent link="body_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="imu_link">
+  </link>
+
+  <!-- leg links -->
+  <xacro:alfarobi_l_leg parent="body_link" />
+  <xacro:alfarobi_r_leg parent="body_link" />
+
+  <!-- arm links -->
+  <xacro:alfarobi_l_arm parent="body_link" />
+  <xacro:alfarobi_r_arm parent="body_link" />
+
+  <!-- head links -->
+  <xacro:alfarobi_head parent="body_link" />
+
+</robot>

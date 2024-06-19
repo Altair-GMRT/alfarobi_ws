@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: dynamixel_sdk
+Description: Description of dynamixel_sdk
+Version: 3.5.2
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib -ldynamixel_sdk
+Requires: 

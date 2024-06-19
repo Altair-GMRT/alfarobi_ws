@@ -1,0 +1,14 @@
+center to arm pitch 0 -66.25 90.3 (right)
+center to head pan 0 0 113.6
+center to right yaw 0 -38.525 -43.5
+
+head pan to tilt 43
+tilt to cam 11 0 60
+
+shouler pitch to roll 0 24.5 -16 (left)
+shoulder roll to elbow 21 0 -107.2 
+
+hip yaw to roll 0 0 -33.5
+
+leg length -116,8
+ank roll to end -43 

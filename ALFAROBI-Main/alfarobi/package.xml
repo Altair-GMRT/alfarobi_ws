@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package>
+  <name>alfarobi</name>
+  <version>0.1.0</version>
+  <description>
+    alfarobi main
+    It includes three demontrations(soccer demo, vision demo, action script demo)
+  </description>
+  <license>BSD</license>
+  <author email="kmjung@robotis.com">kayman</author>
+  <maintainer email="pyo@robotis.com">Pyo</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>roslib</build_depend>
+<!--  <build_depend>team_communication</build_depend>-->
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>robotis_controller_msgs</build_depend>
+  <build_depend>op3_walking_module_msgs</build_depend>
+  <build_depend>quintic_walk_msgs</build_depend>
+  <build_depend>op3_action_module_msgs</build_depend>
+  <build_depend>cmake_modules</build_depend>
+  <build_depend>robotis_math</build_depend>
+  <build_depend>common_rosdeps</build_depend>
+  <build_depend>walk_zmp</build_depend>
+  <build_depend>zmp_walking_module_msgs</build_depend>
+  <build_depend>game_controlller</build_depend>
+  <build_depend>config</build_depend>
+
+  <run_depend>common_rosdeps</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+<!--  <run_depend>team_communication</run_depend>-->
+  <run_depend>roslib</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>robotis_controller_msgs</run_depend>
+  <run_depend>op3_walking_module_msgs</run_depend>
+  <run_depend>quintic_walk_msgs</run_depend>
+  <run_depend>op3_action_module_msgs</run_depend>
+  <run_depend>cmake_modules</run_depend>
+  <run_depend>robotis_math</run_depend>
+  <run_depend>walk_zmp</run_depend>
+  <run_depend>zmp_walking_module_msgs</run_depend>
+  <run_depend>game_controlller</run_depend>
+  <run_depend>config</run_depend>
+  
+</package>

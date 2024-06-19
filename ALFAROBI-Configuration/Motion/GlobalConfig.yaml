@@ -1,0 +1,33 @@
+general:
+  robot_id: 1
+  team_id: 6
+  robot_name: robi
+  role: Striker
+  U2D2: /dev/ttyUSB0
+  baudrate: 1000000
+  useComm: true
+main_program:
+  InitPose: 1
+  WalkingReady: 86
+  GetUpFront: 191
+  GetUpBack: 198
+  GetUpRight: 195
+  GetUpLeft: 196
+  Ceremony: 27
+  KeeperReady: 86
+  KeeperFront: 157
+  KeeperRight: 155
+  KeeperLeft: 156
+  RightKick: 33
+  LeftKick: 34
+button_setting:
+  L1: 1
+  L2: 2
+  L3: 3
+  L4: 4
+  R1: 5
+  R2: 6
+  R3: 7
+  R4: 8
+arduino_controller:
+  offset: 0

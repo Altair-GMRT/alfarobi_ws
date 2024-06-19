@@ -1,0 +1,40 @@
+M: 4
+DSP:
+  ZMPrefX: -0.005
+  ZMPrefY: 0
+  KrZMPx: 1
+  KrZMPy: 1
+  KAngleRoll: 0
+  KGyroRoll: 0
+  KAnglePitch: 0.35
+  KGyroPitch: 0.001
+  pitchErrorMAX: 5
+  pitchErrorMIN: -18
+  rollErrorMAX: 20
+  rollhErrorMIN: -20
+LSSP:
+  ZMPrefX: -0.005
+  ZMPrefY: 0
+  KrZMPx: 1
+  KrZMPy: 1
+  KAngleRoll: 0
+  KGyroRoll: 0
+  KAnglePitch: 0.35
+  KGyroPitch: 0.001
+  pitchErrorMAX: 5
+  pitchErrorMIN: -18
+  rollErrorMAX: 20
+  rollhErrorMIN: -20
+RSSP:
+  ZMPrefX: -0.005
+  ZMPrefY: 0
+  KrZMPx: 1
+  KrZMPy: 1
+  KAngleRoll: 0
+  KGyroRoll: 0
+  KAnglePitch: 0.35
+  KGyroPitch: 0.001
+  pitchErrorMAX: 5
+  pitchErrorMIN: -18
+  rollErrorMAX: 20
+  rollhErrorMIN: -20  

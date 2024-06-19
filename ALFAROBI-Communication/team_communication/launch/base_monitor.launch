@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="team_communication" type="robot_com.py" name="team_communication_node" output="screen" respawn="true">
+    </node>
+    <param name="base_monitor" value="true" type="bool"/>
+</launch>

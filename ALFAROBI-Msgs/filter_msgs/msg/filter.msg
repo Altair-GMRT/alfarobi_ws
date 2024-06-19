@@ -1,0 +1,3 @@
+float32 fltr_sesudah
+float32 fltr_sebelum
+float32 fltr_sesudah_EMAV2

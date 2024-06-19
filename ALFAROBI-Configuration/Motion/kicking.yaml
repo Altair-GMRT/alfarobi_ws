@@ -1,0 +1,18 @@
+kicking:
+  Body_Height: 0.319999993
+  Body_Tilt: 0
+  Leg_X: 0.000
+  Leg_Y: 0.000
+  Leg_Z: 0.000
+  R_Shift: 0.000
+  L_Shift: 0.000
+  R_Lift: 0.000
+  L_Lift: 0.000
+  Leg_Retract: 0.000
+  Retract: 0.000
+  Time_Shift: 0.000
+  Time_Lift: 0.000
+  Time_Retract: 0.000
+  Time_Kick: 0.000
+  Time_CoolDown: 0.000
+  Time_BringDown: 0.000

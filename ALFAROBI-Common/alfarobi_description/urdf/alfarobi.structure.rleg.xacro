@@ -1,0 +1,159 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- right leg -->
+  <xacro:macro name="alfarobi_r_leg" params="parent">
+
+  <!-- right hip yaw joint -->
+  <joint name="r_hip_yaw" type="revolute">
+    <parent link="${parent}"/>
+    <child link="r_hip_yaw_link"/>
+    <origin xyz="0.0175 -0.0384 -0.09728" rpy="0 0 0" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2.8" velocity="5.6548668" lower="-2.6179939" upper="2.6179939" />
+  </joint>
+  <xacro:insert_transmission name="r_hip_yaw" />
+
+<!-- right hip yaw link -->
+<link name="r_hip_yaw_link">
+  <visual>
+    <xacro:insert_mesh_r_hip_yaw_link />
+  </visual>
+  <collision>
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/hip_yaw.stl"  scale="1 1 1"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <xacro:insert_inertia_r_hip_yaw_link />
+  </inertial>
+</link>
+
+  <!-- right hip roll joint -->
+  <joint name="r_hip_roll" type="revolute">
+    <parent link="r_hip_yaw_link"/>
+    <child link="r_hip_roll_link"/>
+    <origin xyz="-0.003 0 -0.0335" rpy="0 0 0" />
+    <axis xyz="-1 0 0" />
+    <limit effort="2.8" velocity="5.6548668" lower="-2.6179939" upper="2.6179939" />
+  </joint>
+  <xacro:insert_transmission name="r_hip_roll" />
+
+<!-- right hip roll link -->
+<link name="r_hip_roll_link">
+  <visual>
+    <xacro:insert_mesh_r_hip_roll_link />
+  </visual>
+  <collision>
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/r_hip_roll.stl"  scale="1 1 1"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <xacro:insert_inertia_r_hip_roll_link />
+  </inertial>
+</link>
+
+  <!-- right hip pitch joint -->
+  <joint name="r_hip_pitch" type="revolute">
+    <parent link="r_hip_roll_link"/>
+    <child link="r_hip_pitch_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="2.8" velocity="5.6548668" lower="-2.6179939" upper="2.6179939" />
+  </joint>
+  <xacro:insert_transmission name="r_hip_pitch" />
+
+<!-- right hip pitch link -->
+<link name="r_hip_pitch_link">
+  <visual>
+    <xacro:insert_mesh_r_hip_pitch_link />
+  </visual>
+  <collision>
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/r_hip_pitch.stl"  scale="1 1 1"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <xacro:insert_inertia_r_hip_pitch_link />
+  </inertial>
+</link>
+
+  <!-- right knee joint -->
+  <joint name="r_knee" type="revolute">
+    <parent link="r_hip_pitch_link"/>
+    <child link="r_knee_link"/>
+    <origin xyz="0 0 -0.1168" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="2.8" velocity="5.6548668" lower="-2.6179939" upper="2.6179939" />
+  </joint>
+  <xacro:insert_transmission name="r_knee" />
+
+<!-- right knee link -->
+<link name="r_knee_link">
+  <visual>
+    <xacro:insert_mesh_r_knee_link />
+  </visual>
+  <collision>
+    <geometry>
+      <mesh filename="package://alfarobi_description/mesh/lower_leg.stl"  scale="1 1 1"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <xacro:insert_inertia_r_knee_link />
+  </inertial>
+</link>
+
+  <!-- right ankle pitch link -->
+  <joint name="r_ank_pitch" type="revolute">
+    <parent link="r_knee_link"/>
+    <child link="r_ank_pitch_link"/>
+    <origin xyz="0 0 -0.1168" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit effort="2.8" velocity="5.6548668" lower="-2.6179939" upper="2.6179939" />
+  </joint>
+  <xacro:insert_transmission name="r_ank_pitch" />
+
+  <!-- right ankle pitch link -->
+  <link name="r_ank_pitch_link">
+    <visual>
+      <xacro:insert_mesh_r_ank_pitch_link />
+    </visual>
+    <collision>
+      <geometry>
+         <mesh filename="package://alfarobi_description/mesh/r_ank_pitch.stl"  scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <xacro:insert_inertia_r_ank_pitch_link />
+    </inertial>
+  </link>
+
+  <!-- right ankle roll link -->
+  <joint name="r_ank_roll" type="revolute">
+    <parent link="r_ank_pitch_link"/>
+    <child link="r_ank_roll_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit effort="2.8" velocity="5.6548668" lower="-2.6179939" upper="2.6179939" />
+  </joint>
+  <xacro:insert_transmission name="r_ank_roll" />
+
+  <!-- right ankle roll link -->
+  <link name="r_ank_roll_link">
+    <visual>
+      <xacro:insert_mesh_r_ank_roll_link />
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://alfarobi_description/mesh/r_ank_roll.stl"  scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <xacro:insert_inertia_r_ank_roll_link />
+    </inertial>
+  </link>
+
+  </xacro:macro>
+
+</robot>
